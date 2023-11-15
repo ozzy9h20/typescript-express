@@ -1,8 +1,9 @@
 import { Router } from 'express'
+import todoController from '../controllers/todos'
 
 const todoRoutes = Router()
 
-todoRoutes.post('/')
+todoRoutes.post('/', todoController.createTodo)
 
 todoRoutes.get('/')
 
