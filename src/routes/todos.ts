@@ -5,10 +5,10 @@ const todoRoutes = Router()
 
 todoRoutes.post('/', todoController.createTodo)
 
-todoRoutes.get('/')
+todoRoutes.get('/', todoController.getTodos)
 
-todoRoutes.patch('/:id')
+todoRoutes.patch('/:id', todoController.updateTodo)
 
-todoRoutes.delete('/:id')
+todoRoutes.delete('/:id', todoController.deleteTodo)
 
 export default todoRoutes
